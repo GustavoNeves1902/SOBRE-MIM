@@ -5,6 +5,7 @@
 
 body{
     background-color: black;
+    height: 100vh;
 }
 
 .cabecalho{
@@ -17,6 +18,7 @@ body{
     display: flex;
     flex-direction: row;
     gap: 20px;
+    margin-bottom: 3%;
 }
 
 .navbar_navegacao{
@@ -34,7 +36,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10%;
 }
 
 .principal__esq{
@@ -44,20 +45,29 @@ body{
     justify-content: space-between;
     flex-direction: column;
     text-align: center;
+    padding: 10%;
 }
 
-.principal__principal__titulo, .principal__principal__texto{
+.principal__principal__titulo{
     color: #f6f6f6;
+    font-size: 24px;
+}
+
+.principal__principal__texto{
+    color: #f6f6f6;
+    font-size: 20px;
 }
 
 .principal__img{
-    width: 40%;
+    width: 30%;
     border-radius: 6px;
     background-color:bisque;
     padding: 1%;
+    margin: 0 10% 0 0;
 }
 
 .ancora {
+    font-size: 24px;
     text-decoration: none;
     color: #f6f6f6;
     background-color: blue;
@@ -78,19 +88,21 @@ body{
 
 @media (max-width: 768px) {
     .principal {
-        display: block; /* em vez de grid */
-        height: auto; /* deixa o conteúdo ajustar a altura */
+        flex-direction: column;
+        display: flex;
+        height: auto;
         padding: 20px;
+        align-items: center;
     }
 
-    .principal__principal {
+    .principal {
         flex-direction: column;
         align-items: center;
-        margin: 5% 0;
     }
 
-    .principal__principal__img {
-        width: 80%;
+    .principal__img {
+        width: 60%;
+        margin: 0;
     }
 
     .ancora {
